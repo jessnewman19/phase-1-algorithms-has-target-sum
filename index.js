@@ -1,5 +1,14 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  let seenNumbers = new Set()
+  for (number in array) { 
+    let complement = target-number
+    if (seenNumbers.has(complement)) { 
+      seenNumbers.add(number)
+      return true
+    } else { 
+      return false
+    }
+  } 
 }
 
 /* 
@@ -8,10 +17,16 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  - The function should return true if any pair of numbers in the array adds up to the target number
+  1. Declare a new variable that is initially equal to 0
+  2. Write a loop that loops through each element in the array and takes the sum. 
+  3. ...I got stuck here
 */
 
 /*
   Add written explanation of your solution here
+  1. Sort the array in ascending order
+  2. 
 */
 
 // You can run `node index.js` to view these console logs
